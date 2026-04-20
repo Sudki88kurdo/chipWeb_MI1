@@ -1,0 +1,395 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: Georgia, Verdana, Tahoma, sans-serif;
+  background: linear-gradient(-45deg, #07193B , #213c6b,  #0a2455, #0b1b36);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  height: 100vh;
+  overflow-x: hidden;
+}
+/*Haupt Img*/
+.flex_row_center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex_col_center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home-content{
+  height: 100vh;
+  width: 100vw;
+}
+/*Button für Navbar*/
+.btn_Nav{
+  display:block;
+  right: 0;
+  margin-top: 50px;
+  border-color: white;
+  width:50px;
+  height:50px;
+  transform:translate(-50%,-50%);
+  position:absolute;
+  display: none;
+}
+.btn_Nav input {
+    opacity: 0;
+}
+.line{
+  height:5px;
+  width:30px;
+  background-color:rgb(255, 255, 255);
+  top:30%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  position:absolute;
+  transition: all ease 0.2s;
+}
+.line1{
+  height:5px;
+  width:30px;
+  background-color:rgb(255, 255, 255);
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  position:absolute;
+  transition: all ease 0.2s;
+}
+.line2{
+  height:5px;
+  width:30px;
+  background-color:rgb(255, 252, 252);
+  top:70%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  position:absolute;
+  transition: all ease 0.2s;
+}
+.btn_Nav input:checked ~ .line{
+  height:6px;
+  width:50px;
+  transform:translate(-50%,-50%) rotate(45deg);
+  top:50%;
+  /*animation: 0.2s test forwards;*/   /* ANIMAITON OPTION */
+}
+.btn_Nav input:checked ~ .line1{
+  height:6px;
+  width:50px;
+  transform:translate(-50%,-50%) rotate(45deg);
+  /*animation: 0.2s test1 forwards;*/  /* ANIMAITON OPTION */
+}
+.btn_Nav input:checked ~ .line2{
+  height:6px;
+  width:50px;
+  transform:translate(-50%,-50%) rotate(-45deg);
+  top:50%;
+  /*animation: 0.2s test2 forwards;*/  /* ANIMAITON OPTION */
+}
+/*Liste von Ul von Navbar wenn es klein wird*/
+ .ul_view{
+  position: absolute;
+  right: 0;
+  width: 40%;
+  margin-bottom: 30px;
+  margin-top: 35px;
+  font-size: 1.5rem;
+}
+
+.nav_Elemente{
+  color: gold; 
+ }
+/*Navbar wenn window größ ist*/
+.nav_komplet{
+  padding: 0;
+  position: relative;
+  justify-content: space-around;
+  background-image: linear-gradient(162deg,hsl(223deg 71% 7%) 50%,hsl(198deg 68% 71%));  
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  float: right-side;
+  text-align: right;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  opacity: 70%;
+}
+/*Navbar wenn window größ ist und wenn hintergrung Img geändert*/
+.nav_komplet.active{
+  padding: 0;
+  position: relative;
+  justify-content: space-around;
+  background-image: linear-gradient(162deg,hsl(205deg 100% 34%) 50%,hsl(219deg 71% 21%));  
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  float: right-side;
+  text-align: right;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  opacity: 70%;
+}
+
+/*Navbar Elemente*/
+li {
+  width: 100%;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  text-align: center;
+  margin-right: 0;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  font-family: Javanese Text;
+}
+
+li a :link {
+  text-decoration: none;
+  color: white;
+}
+
+li a :hover {
+  color:white;
+}
+
+li a :visited {
+  color: white;
+}
+
+li a :focus{
+  color: rgb(255, 255, 255);
+}
+
+/*Hintergrund Img Home Seite*/
+.backImg{
+  height: 100vh;
+  width: 100vw;
+  background-image: url("fotoBiochip/micro-with-brain.jpg");
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: -555;
+  background-size: cover;
+}
+/*Hintergrund Img wenn es ändert*/
+.backImg.active {
+  height: 100vh;
+  width: 100%;
+  background-image: url("fotoBiochip/brainIT.png");
+  right: 0;
+  left: 0;
+  z-index: -555;
+  background-size: cover;
+}
+/*click für Hindergrund Img*/
+.rightClick{ 
+  position: absolute;
+  right: 0;  
+  margin-top: 10%;
+  cursor: pointer;
+}
+.rightClick:hover{
+  height: 60px;
+  width: 90px;
+  cursor: pointer;
+}
+.box_textBiochip{
+  width: 70vw;
+  margin: 5vh 0 6vh 7vw ;
+  border-style: outset;
+  border-color: gold;
+  box-shadow:  0 4px 8px 0 white, 0 6px 20px 0 white;;
+}
+._textBiochip{
+  margin-top: 1rem;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 5rem;
+  color: gold;
+  text-align: left;
+  width: 60%;
+  margin-top: 5%;
+  margin-left: 3%;
+  animation: mymoved 4s;
+  animation-direction: alternate;
+  position: relative;
+  animation-timing-function: ease;
+}
+
+h2,h4{  
+  color: gold;  
+  font-size: 1.5rem;  
+}
+
+.chip{  
+  margin-top: 4%;  
+}
+
+P, h3,.btn{ 
+  color: white; 
+}
+
+.logoMini { 
+  margin-top: 0%; 
+}
+
+.logo {  
+  margin-right: 40%; 
+}
+/*Adresse im Teamcht.html*/
+.adresse {
+  border-style: double;
+  color: black;
+  background-color:  gold;
+  text-align: center;
+  width: 100%;
+}
+.box_contact, .box_adresse{
+  margin-top: 10vh;
+}
+.name_entwickler{
+  margin-top: 30px;
+}
+.btn_absenden{
+  position: absolute;
+ right: 0;
+ margin-right: 90px;
+ margin-top: 30px;
+}
+
+.miniHeader {  
+  font-size: 390%;  
+  color: gold;
+}
+.hauptfoto1 { 
+  margin-top: 7%;
+}
+
+.row-Minibox {
+  height: 15VW;
+  border-style: dashed;
+  border-color: red;
+  margin-top: 10%;
+}
+
+.teamFoto{  
+  border-radius: 100%;
+}
+
+.team{  
+  margin-top: 10%;
+}
+
+.plakat{  
+  margin-top: 6%; 
+  align-items: flex-end;
+}
+
+._Down{ 
+  margin-top: 20%;
+}
+.btn_down{
+  margin-right: 10px;
+}
+
+.home_links a :link { 
+  text-decoration: none;  
+  color: white;
+}
+
+.home_links a :hover {  
+  color:white;  
+}
+
+.home_links a :visited {  
+  color: white;
+}
+
+.home_links a :focus{  
+  color: rgb(255, 255, 255);
+}
+/*Audio*/
+.p_aus{   
+  display: block;
+  height:300px;
+  width:300px; 
+}
+
+.p_aus.aktive{   
+  display: none;
+}
+
+.p_an{    
+  display: none;
+  height:300px;
+  width:300px;
+  box-shadow: 0 4px 8px 0 gold, 0 6px 20px 0 gold;
+  border-radius: 100%;
+}
+.p_an.aktive{    
+  display: block;
+
+}
+
+/*Window klein*/
+@media screen and (max-width:990px){
+  .btn_Nav{
+    display: block;
+  }
+  .ul_view{
+    background-image: linear-gradient(162deg,hsl(223deg 71% 7%) 50%,hsl(198deg 68% 71%));  
+  }
+  .ul_view.active{
+    background-image: linear-gradient(162deg,hsl(205deg 100% 34%) 50%,hsl(219deg 71% 21%));  
+  }
+  .btn_absenden{
+    margin-left: 0px;
+    margin-top: 30px;
+  }
+  
+}
+@media screen and (max-width:768px){
+.audio_img {
+  margin-top: 20%;
+}
+.entwickler_box{
+margin-top: 30px;
+}
+
+  
+}
+/*Animation*/
+@keyframes mymove {
+  from {
+    right: -180%;
+  }
+  to {
+    right: 0%;
+  }
+}
+
+@keyframes mymoved {
+  from {
+    right: -180%;
+  }
+  to {
+    right: 0%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 25%;
+  }
+  50% {
+    background-position: 50% 25%;
+  }
+  100% {
+    background-position: 25% 0%;
+  }
+}
